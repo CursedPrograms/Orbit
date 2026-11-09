@@ -16,19 +16,62 @@
 
 # ORBIT
 
-**An [Arcade Phantasm](https://arcade-phantasm.netlify.app/) game** · The browser version: play it on its page once it's built. The Windows exe is [Orbit-Exe](https://github.com/CursedPrograms/Orbit-Exe).
+**An [Arcade Phantasm](https://arcade-phantasm.netlify.app/) game** · **[Play it](https://cursedprograms.github.io/Orbit/)**
 
 A tiny spacecraft caught between gravitational fields. Orbit planets to dodge enemies, slingshot between gravity wells and collect energy orbs, while planets explode around you.
 
-**The twist:** Enemies have their own gravity, pulling you off course.
+**The twist:** enemies have their own gravity, pulling you off course.
 
-## Status
+<div align="center">
+  <img src="images/screenshot-splash.png" alt="ORBIT splash" width="49%"/>
+  <img src="images/screenshot-play.png" alt="ORBIT: a planet explodes while another counts down" width="49%"/>
+</div>
 
-In development. Plain HTML, CSS and JavaScript on a canvas: `index.html`, `site/style.css`, `site/game.js`, sound made with Web Audio.
+## Versions
+
+| Version | Where | Status |
+|---|---|---|
+| Browser | this folder, the repo root · **[Play it](https://cursedprograms.github.io/Orbit/)** | Playable |
+| Windows exe | `cpp/` | Coming |
+| Android | `android/` | Coming |
+
+## How to play
+
+Every planet pulls on you (inverse square: the faint rings mark its well). Your thrust is weak and your fuel is short, so gravity is how you really move: fall round a planet, then slingshot to the next. The dotted line shows where you'll fall over the next couple of seconds, and a pink cross marks a crash ahead.
+
+- **Energy orbs**: collect enough to clear the wave. Most ride an orbit round a planet: match it to catch one. Each orb tops up your fuel.
+- **Ghosts** hunt you and pull you towards them with their own gravity (the green rings). From wave 3 come the maws, slow ghosts with deep wells, and from wave 4 the darters.
+- **Planets explode**: a planet cracks, glows and counts down, then goes with a shockwave and flying debris, and its well is gone. Get clear. The blast, the shockwave and the debris destroy ghosts too, for points. New planets form in their place.
+- Fuel slowly comes back when you're not burning. The arena's edge bounces you back in.
+
+Each wave has more planets and more ghosts. You have three lives, and an extra one every second wave. Fuel left at the end of a wave adds to the bonus. Your best score is kept in the browser.
+
+## Controls
+
+| Key | Action |
+|---|---|
+| ← → or A D | Turn |
+| ↑ or W | Thrust |
+| ↓ or S | Brake (thrust against your motion) |
+| P or Esc | Pause |
+| M | Mute |
+| Space or Enter | Fly again after game over |
+
+On a phone: drag anywhere to steer and thrust towards the drag, BRAKE brakes, II pauses.
+
+## Files
+
+- `index.html`: the page
+- `site/style.css`: the page's look
+- `site/game.js`: the game: fixed-step gravity physics, the planets, the ghosts, the trajectory dots, the drawing
+- `site/sfx.js`: the sound, made with Web Audio (no audio files)
+- `images/`: the Cursed logo and the screenshots
+
+Open `index.html#shot` for a mid-game screenshot.
 
 ## Also in the arcade
 
-[Killer Stardust](https://github.com/CursedPrograms/killer-stardust) · PROTOCOL.hex · SÉANCE · RICOCHET REAPER · GRAVE DANGER · VORTEX · ORBIT · ROCKS OF RUIN · DEVOURER
+[KillerStardust](https://github.com/CursedPrograms/KillerStardust) · ProtocolHex · Seance · RicochetReaper · GraveDanger · [Vortex](https://github.com/CursedPrograms/Vortex) · **Orbit** · RocksOfRuin · Devourer
 
 <br>
 <div align="center">
