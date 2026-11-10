@@ -32,8 +32,15 @@ A tiny spacecraft caught between gravitational fields. Orbit planets to dodge en
 | Version | Where | Status |
 |---|---|---|
 | Browser | this folder, the repo root · **[Play it](https://cursedprograms.github.io/Orbit/)** | Playable |
-| Windows exe | `cpp/` | Coming |
+| Windows exe | `cpp/` (build: `cpp/build.bat`) | Playable |
 | Android | `android/` · [APK](android/apk/) | Playable |
+
+
+## Windows exe
+
+C++17 with SDL2, OpenGL 3, [Dear ImGui](https://github.com/ocornut/imgui) and [stb](https://github.com/nothings/stb). The same game as the browser one, with its sound effects made as it plays (no audio files). F11 fullscreen, Esc menu.
+
+To build it: Visual Studio 2022 (C++) and CMake, then `cpp/build.bat` (or `build.ps1`; `build.sh` on Linux with SDL2 installed). It fetches SDL2 once into `cpp/external/`, builds `cpp/build/Release/Orbit.exe` and packs `cpp/dist/Orbit-win64.zip`.
 
 ## How to play
 
